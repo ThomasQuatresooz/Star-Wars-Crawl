@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Star Wars';
+    src: url(./font/starwars.woff) format('woff');
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+
+body {
+    overflow: hidden;
+    font-family: 'Star Wars', sans-serif;
+    background: url(./background.jpg) 0 center no-repeat;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    margin: 1rem 5rem;
+    transform-origin: 50% 100%;
+    perspective:50%;
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 7rem;
+}
+
+h3 {
+    font-size: 3.5rem;
+}
+
+
+
+.title {}
+
+.story {
+    color: goldenrod;
+    font-size: 5rem;
+    text-align: start;
+    text-overflow: clip;
+    width: 90%;
+    align-self: center;
+
+    transform: translate3d(0,0,0) rotateX(-45deg);
+
+
+
+    animation: crawl 10s linear forwards;
+
+}
+
+@keyframes crawl {
+    0% {
+        transform: translate3d(0, 400px, 0) rotateX(-45deg);
+    }
+
+    100% {
+        transform: translate3d(0, -3000px, 0) rotateX(-45deg);
+    }
+}
